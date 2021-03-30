@@ -75,8 +75,6 @@ public class StudentDAOImpl implements StudentDAO{
 		
 		Student student = currentSession.get(Student.class, id);
 		
-		currentSession.delete(student);
-		
 		currentSession.getTransaction().commit();
 		
 		return student;
